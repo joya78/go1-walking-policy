@@ -603,17 +603,16 @@ Warning: --icon-name is deprecated and will be removed in a future version of ze
 Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
 
 (zenity:190360): Gtk-WARNING **: 18:01:03.851: Failed to open display
-pisode 157 | Steps: 115 | Avg Reward: 0.016
-[INFO] Episode 172 | Steps: 21 | Avg Reward: 0.016
-[INFO] Episode 173 | Steps: 80 | Avg Reward: 0.017
-[INFO] Episode 174 | Steps: 22 | Avg Reward: 0.017
-[INFO] Episode 175 | Steps: 7 | Avg Reward: 0.016
-[INFO] Episode 176 | Steps: 3 | Avg Reward: 0.015
-[INFO] Episode 177 | Steps: 1 | Avg Reward: 0.015
-[INFO] Episode 178 | Steps: 30 | Avg Reward: 0.016
-[INFO] Episode 180 | Steps: 18 | Avg Reward: 0.017
-[INFO] Episode 181 | Steps: 14 | Avg Reward: 0.017
-[INFO] Episode 182 | Steps: 4 | Avg Reward: 0.015
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:190928): Gtk-WARNING **: 18:03:03.879: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:191754): Gtk-WARNING **: 18:05:03.907: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:192354): Gtk-WARNING **: 18:07:03.935: Failed to open display
+ Avg Reward: 0.015
 [INFO] Episode 183 | Steps: 13 | Avg Reward: 0.016
 [INFO] Episode 184 | Steps: 5 | Avg Reward: 0.015
 [INFO] Episode 185 | Steps: 1 | Avg Reward: 0.015
@@ -738,3 +737,12 @@ Warning: --icon-name is deprecated and will be removed in a future version of ze
 Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
 
 (zenity:190367): Gtk-WARNING **: 18:01:03.891: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:190938): Gtk-WARNING **: 18:03:03.920: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:191761): Gtk-WARNING **: 18:05:03.950: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:192361): Gtk-WARNING **: 18:07:03.977: Failed to open display
