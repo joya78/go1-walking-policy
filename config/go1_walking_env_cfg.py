@@ -5,7 +5,8 @@
 
 from isaaclab.utils import configclass
 
-from isaaclab_tasks.manager_based.locomotion.velocity.velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+# Import from local base configuration
+from .base.velocity_env_cfg import LocomotionVelocityRoughEnvCfg
 
 ##
 # Pre-defined configs
@@ -49,13 +50,25 @@ class UnitreeGo1RoughEnvCfg(LocomotionVelocityRoughEnvCfg):
         self.events.base_com = None
 
         # rewards
+        # -- task rewards (high weight for main objectives)
+        self.rewards.track_lin_vel_xy_exp.weight = 1.0
+        self.rewards.track_ang_vel_z_exp.weight = 0.5
+        
+        # -- gait and contact rewards
         self.rewards.feet_air_time.params["sensor_cfg"].body_names = ".*_foot"
-        self.rewards.feet_air_time.weight = 0.01
-        self.rewards.undesired_contacts = None
-        self.rewards.dof_torques_l2.weight = -0.0002
-        self.rewards.track_lin_vel_xy_exp.weight = 1.5
-        self.rewards.track_ang_vel_z_exp.weight = 0.75
-        self.rewards.dof_acc_l2.weight = -2.5e-7
+        self.rewards.feet_air_time.weight = 0.125
+        self.rewards.undesired_contacts = None  # Disable for Go1 (no thigh collision issues)
+        
+        # -- penalties for unwanted behavior
+        self.rewards.lin_vel_z_l2.weight = -2.0  # Penalize vertical motion
+        self.rewards.ang_vel_xy_l2.weight = -0.05  # Penalize roll/pitch rotation
+        self.rewards.dof_torques_l2.weight = -1.0e-5  # Penalize high torques
+        self.rewards.dof_acc_l2.weight = -2.5e-7  # Penalize high accelerations
+        self.rewards.action_rate_l2.weight = -0.01  # Penalize rapid action changes
+        
+        # -- optional penalties (disabled by default)
+        self.rewards.flat_orientation_l2.weight = -5.0  # Penalize non-flat orientation
+        self.rewards.dof_pos_limits.weight = 0.0  # Disabled
 
         # terminations
         self.terminations.base_contact.params["sensor_cfg"].body_names = "trunk"

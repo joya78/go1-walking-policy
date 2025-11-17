@@ -1,0 +1,89 @@
+[0;34m========================================[0m
+[0;34mGo1 Walking Policy Training[0m
+[0;34m========================================[0m
+
+[0;32mActivating conda environment...[0m
+
+[0;32mTraining Configuration:[0m
+  Task: Isaac-Velocity-Rough-Unitree-Go1-v0
+  Number of Environments: 4096
+  Max Iterations: 100
+  Mode: Headless
+
+[0;32mStarting training...[0m
+[1;33mPress Ctrl+C to stop training[0m
+
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H  [INFO] Using python from: /home/maxime/miniconda3/envs/env_isaaclab/bin/python
+Loading user config located at: '/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20251116_171217.log
+2025-11-17T01:12:17Z [113ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2025-11-17T01:12:17Z [416ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2025-11-17T01:12:18Z [577ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2025-11-17T01:12:18Z [778ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A4500                 | Yes: 0 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 29db3550.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | NVIDIA RTX A4500                 | Yes: 1 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | cea0e031.. |
+|     |                                  |        |     |            | 2b        |            |
+|---------------------------------------------------------------------------------------------|
+| 2   | NVIDIA RTX A4500                 | Yes: 2 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 625bf251.. |
+|     |                                  |        |     |            | 41        |            |
+|---------------------------------------------------------------------------------------------|
+| 3   | NVIDIA RTX A4500                 | Yes: 3 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 1accb290.. |
+|     |                                  |        |     |            | 61        |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 6.14.0-35-generic
+| Processor: AMD Ryzen Threadripper PRO 5995WX 64-Cores
+| Cores: 64 | Logical Cores: 128
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 257521 | Free Memory: 242411
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2025-11-17T01:12:24Z [7,201ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2025-11-17T01:12:24Z [7,242ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2025-11-17T01:12:24Z [7,242ms] [Warning] [gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Cuda failure ../../../souException ignored in: <function ManagerBasedEnv.__del__ at 0x7a0a622e1b20>
+Traceback (most recent call last):
+  File "/home/maxime/IsaacLab-main/source/isaaclab/isaaclab/envs/manager_based_env.py", line 213, in __del__
+    self.close()
+  File "/home/maxime/IsaacLab-main/source/isaaclab/isaaclab/envs/manager_based_rl_env.py", line 309, in close
+    if not self._is_closed:
+           ^^^^^^^^^^^^^^^
+AttributeError: 'ManagerBasedRLEnv' object has no attribute '_is_closed'
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/maxime/IsaacLab-main/apps/isaaclab.python.headless.kit
+rce/plugins/carb.cudainterop/p2pBandwidthLatencyTest/p2pBandwidthLatencyTest.cu:681: 'peer access is already enabled'
+Traceback (most recent call last):
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/gymnasium/envs/registration.py", line 734, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ManagerBasedRLEnv.__init__() missing 1 required positional argument: 'cfg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maxime/my_go1_project/scripts/train_custom.py", line 73, in <module>
+    main()
+  File "/home/maxime/my_go1_project/scripts/train_custom.py", line 48, in main
+    env = gym.make(task_name, num_envs=args_cli.num_envs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/gymnasium/envs/registration.py", line 746, in make
+    raise type(e)(
+TypeError: ManagerBasedRLEnv.__init__() missing 1 required positional argument: 'cfg' was raised from the environment creator for Isaac-Velocity-Rough-Unitree-Go1-Custom-v0 with kwargs ({'env_cfg_entry_point': <class 'config.go1_walking_env_cfg.UnitreeGo1RoughEnvCfg'>, 'rsl_rl_cfg_entry_point': 'config.agents.rsl_rl_ppo_cfg:UnitreeGo1RoughPPORunnerCfg', 'num_envs': 4096})
+2025-11-17T01:12:26Z [8,693ms] [Warning] [omni.physx.plugin] USD stage detach not called, holding a loose ptr to a stage!
+2025-11-17T01:12:26Z [9,007ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+
+[0;32mTraining completed![0m
+Logs saved to: [0;34mlogs/rsl_rl/[0m

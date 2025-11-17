@@ -1,0 +1,740 @@
+[0;34m========================================[0m
+[0;34mGo1 Walking Policy Testing[0m
+[0;34m========================================[0m
+
+[0;32mActivating conda environment...[0m
+[0;32mAuto-detected checkpoint: logs/rsl_rl/unitree_go1_rough/2025-11-16_17-17-58/model_499.pt[0m
+
+[0;34mConfiguration:[0m
+  Task: [0;32mIsaac-Velocity-Rough-Unitree-Go1-Play-v0[0m
+  Number of environments: [0;32m50[0m
+  Checkpoint: [0;32m/home/maxime/IsaacLab-main/logs/rsl_rl/unitree_go1_rough/2025-11-16_17-17-58/model_499.pt[0m
+  Video recording: [1;33mDisabled[0m
+
+[0;34mStarting policy testing...[0m
+[1;33mCommand: bash isaaclab.sh -p /home/maxime/my_go1_project/scripts/play_go1_walking.py     --task Isaac-Velocity-Rough-Unitree-Go1-Play-v0     --num_envs 50     --checkpoint /home/maxime/IsaacLab-main/logs/rsl_rl/unitree_go1_rough/2025-11-16_17-17-58/model_499.pt[0m
+
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H   [INFO] Using python from: /home/maxime/miniconda3/envs/env_isaaclab/bin/python
+[Warning] [simulation_app.simulation_app] DISPLAY environment variable is not set, running in headless mode with --no-window flag. Set DISPLAY environment variable if you want to run in non-headless mode.
+Loading user config located at: '/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20251116_173916.log
+[0.071s] [ext: omni.kit.async_engine-0.0.3] startup
+[0.269s] [ext: omni.metrics.core-0.0.3] startup
+[0.270s] [ext: omni.client.lib-1.1.0] startup
+[0.284s] [ext: omni.blobkey-1.1.2] startup
+[0.284s] [ext: omni.stats-1.0.1] startup
+[0.285s] [ext: omni.datastore-0.0.0] startup
+[0.291s] [ext: omni.client-1.3.0] startup
+[0.295s] [ext: omni.ujitso.default-1.0.0] startup
+[0.298s] [ext: omni.hsscclient-1.1.2] startup
+[0.301s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.305s] [ext: omni.assets.plugins-0.0.0] startup
+[0.306s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.315s] [ext: carb.windowing.plugins-1.0.0] startup
+2025-11-17T01:39:16Z [280ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:39:16Z [280ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[0.317s] [ext: omni.kit.renderer.init-0.0.0] startup
+2025-11-17T01:39:16Z [329ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2025-11-17T01:39:50Z [34,350ms] [Warning] [carb.launcher.plugin]     child process terminated by the signal 9 {code = 0x00000009}
+2025-11-17T01:39:50Z [34,350ms] [Warning] [gpu.foundation.plugin] Process '/usr/bin/nvidia-smi -q': error reading stderr and/or stdout.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A4500                 | Yes: 0 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 29db3550.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | NVIDIA RTX A4500                 | Yes: 1 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | cea0e031.. |
+|     |                                  |        |     |            | 2b        |            |
+|---------------------------------------------------------------------------------------------|
+| 2   | NVIDIA RTX A4500                 | Yes: 2 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 625bf251.. |
+|     |                                  |        |     |            | 41        |            |
+|---------------------------------------------------------------------------------------------|
+| 3   | NVIDIA RTX A4500                 | Yes: 3 |     | 20716   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2232      | 1accb290.. |
+|     |                                  |        |     |            | 61        |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 6.14.0-35-generic
+| Processor: AMD Ryzen Threadripper PRO 5995WX 64-Cores
+| Cores: 64 | Logical Cores: 128
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 257521 | Free Memory: 241362
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2025-11-17T01:40:21Z [64,819ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2025-11-17T01:40:21Z [64,861ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2025-11-17T01:40:21Z [64,861ms] [Warning] [gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Unidirectional P2P=Enabled Bandwidth (P2P Writes) Matrix (GB/s)
+   D\D     0      1      2      3 
+     0 564.28   1.74   1.62   1.62 
+     1   1.60 565.71   1.62   1.62 
+     2   1.77   1.62 475.94   1.62 
+     3   1.62   1.62   1.62 564.90 
+P2P=Enabled Latency (P2P Writes) Matrix (us)
+   GPU     0      1      2      3 
+     0   1.77 49297.29 49297.20 49297.20 
+     1 49297.51   1.62 49297.58 49297.58 
+     2 49297.51 49297.52   1.58 49297.49 
+     3 49297.67 49297.59 49297.52   1.57 
+
+   CPU     0      1      2      3 
+     0   2.43   1.99   2.99   2.87 
+     1   3.63   2.61   2.05   2.41 
+     2   2.34   2.17   2.67   2.08 
+     3   2.15   2.20   2.76   3.17 
+2025-11-17T01:41:26Z [130,000ms] [Warning] [gpu.foundation.plugin] CUDA peer-to-peer observed bandwidth: 1.6 GB/s.
+2025-11-17T01:41:26Z [130,000ms] [Warning] [gpu.foundation.plugin] CUDA peer-to-peer observed latency: 49297.7 us.
+2025-11-17T01:41:26Z [130,000ms] [Warning] [gpu.foundation.plugin] Please verify if observed bandwidth and latency are expected.
+[130.927s] [ext: omni.materialx.libs-1.0.7] startup
+[130.934s] [ext: omni.kit.pipapi-0.0.0] startup
+[130.935s] [ext: omni.usd.config-1.0.6] startup
+[130.938s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[130.939s] [ext: omni.usd.libs-1.0.1] startup
+[131.019s] [ext: omni.mdl-56.0.3] startup
+[131.088s] [ext: omni.iray.libs-0.0.0] startup
+[131.094s] [ext: omni.mdl.neuraylib-0.2.12] startup
+[131.097s] [ext: omni.kit.usd.mdl-1.1.5] startup
+[131.185s] [ext: omni.kit.loop-isaac-1.3.7] startup
+[131.186s] [ext: omni.kit.test-2.0.1] startup
+[131.234s] [ext: omni.kit.pip_archive-0.0.0] startup
+[131.234s] [ext: omni.kit.telemetry-0.5.2] startup
+[131.301s] [ext: omni.appwindow-1.1.10] startup
+2025-11-17T01:41:27Z [131,266ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,266ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[131.305s] [ext: omni.kit.renderer.core-1.1.0] startup
+2025-11-17T01:41:27Z [131,549ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,549ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2025-11-17T01:41:27Z [131,578ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,578ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[131.616s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[131.619s] [ext: omni.kit.renderer.imgui-2.0.5] startup
+2025-11-17T01:41:27Z [131,588ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,588ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2025-11-17T01:41:27Z [131,591ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,591ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2025-11-17T01:41:27Z [131,592ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2025-11-17T01:41:27Z [131,592ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[131.706s] [ext: omni.ui-2.27.1] startup
+[131.717s] [ext: omni.kit.mainwindow-1.0.3] startup
+[131.718s] [ext: carb.audio-0.1.0] startup
+[131.727s] [ext: omni.uiaudio-1.0.0] startup
+[131.728s] [ext: omni.kit.uiapp-0.0.0] startup
+[131.728s] [ext: omni.usd.schema.metrics.assembler-107.3.1] startup
+[131.731s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[131.736s] [ext: omni.usd.schema.audio-0.0.0] startup
+[131.739s] [ext: omni.pip.cloud-1.4.3] startup
+[131.742s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[131.745s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[131.747s] [ext: omni.usd.schema.anim-0.0.0] startup
+[131.764s] [ext: usdrt.scenegraph-7.6.1] startup
+[131.806s] [ext: omni.activity.core-1.0.3] startup
+[131.808s] [ext: omni.kit.actions.core-1.0.0] startup
+[131.811s] [ext: omni.usd_resolver-1.0.0] startup
+[131.815s] [ext: omni.kit.commands-1.4.10] startup
+[131.819s] [ext: omni.usd.core-1.5.3] startup
+[131.821s] [ext: omni.resourcemonitor-107.0.1] startup
+[131.824s] [ext: omni.kit.audiodeviceenum-1.0.2] startup
+[131.825s] [ext: omni.hydra.usdrt_delegate-7.5.1] startup
+[131.832s] [ext: omni.kit.usd_undo-0.1.8] startup
+[131.832s] [ext: omni.kit.window.popup_dialog-2.0.24] startup
+[131.836s] [ext: omni.graph.exec-0.9.6] startup
+[131.837s] [ext: omni.timeline-1.0.14] startup
+[131.839s] [ext: omni.kit.widget.nucleus_connector-2.0.1] startup
+[131.841s] [ext: omni.kit.exec.core-0.13.4] startup
+[131.843s] [ext: omni.hydra.scene_delegate-0.3.4] startup
+[131.847s] [ext: omni.usd-1.13.10] startup
+[131.894s] [ext: omni.kit.asset_converter-5.0.17] startup
+[131.905s] [ext: omni.usd.schema.omni_lens_distortion-0.0.0] startup
+[131.906s] [ext: omni.usd.schema.omniscripting-1.0.0] startup
+[131.910s] [ext: isaacsim.robot.schema-3.6.0] startup
+[131.917s] [ext: omni.usd.schema.render_settings.rtx-0.0.0] startup
+[131.918s] [ext: omni.usd.schema.physx-107.3.26] startup
+[131.949s] [ext: omni.usd.schema.omni_sensors-0.0.0] startup
+[131.949s] [ext: omni.index.libs-380600.8087.0] startup
+[131.949s] [ext: omni.volume-0.5.2] startup
+[131.953s] [ext: omni.ujitso.client-0.0.0] startup
+[131.953s] [ext: omni.index-1.0.1] startup
+[131.954s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[131.955s] [ext: omni.hydra.rtx-1.0.0] startup
+2025-11-17T01:41:28Z [131,936ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[131.992s] [ext: omni.kit.notification_manager-1.0.10] startup
+[131.994s] [ext: omni.kit.clipboard-1.0.5] startup
+[131.995s] [ext: omni.kit.viewport.legacy_gizmos-1.0.19] startup
+[131.997s] [ext: omni.kit.raycast.query-1.1.0] startup
+[132.002s] [ext: omni.kit.menu.core-1.1.2] startup
+[132.002s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[132.005s] [ext: omni.kit.helper.file_utils-0.1.9] startup
+[132.007s] [ext: omni.kit.widget.path_field-2.0.11] startup
+[132.007s] [ext: omni.kit.widget.context_menu-1.2.5] startup
+[132.008s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[132.009s] [ext: omni.kit.widget.filebrowser-2.12.3] startup
+[132.014s] [ext: omni.kit.widget.browser_bar-2.0.10] startup
+[132.015s] [ext: omni.kit.usd.layers-2.2.11] startup
+[132.022s] [ext: omni.ui.scene-1.11.5] startup
+[132.027s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[132.027s] [ext: omni.kit.window.filepicker-2.13.4] startup
+[132.041s] [ext: omni.kit.menu.utils-2.0.5] startup
+[132.047s] [ext: omni.kit.context_menu-1.8.6] startup
+[132.049s] [ext: omni.kit.viewport.scene_camera_model-1.0.6] startup
+[132.054s] [ext: omni.kit.hydra_texture-1.4.6] startup
+[132.059s] [ext: omni.kit.window.file_importer-1.1.18] startup
+[132.061s] [ext: omni.kit.widget.searchable_combobox-1.0.6] startup
+[132.062s] [ext: omni.kit.window.drop_support-1.0.5] startup
+[132.063s] [ext: omni.kit.widget.viewport-107.1.3] startup
+[132.067s] [ext: omni.kit.material.library-2.0.7] startup
+[132.072s] [ext: omni.hydra.engine.stats-1.0.3] startup
+[132.075s] [ext: omni.kit.widget.settings-1.2.6] startup
+[132.076s] [ext: omni.kit.viewport.window-107.2.0] startup
+[132.093s] [ext: omni.kit.window.preferences-1.8.0] startup
+[132.098s] [ext: omni.kit.widget.toolbar-2.0.1] startup
+[132.103s] [ext: omni.kit.viewport.utility-1.1.2] startup
+[132.103s] [ext: omni.kit.manipulator.transform-107.0.0] startup
+[132.107s] [ext: omni.kit.manipulator.tool.snap-1.5.13] startup
+[132.111s] [ext: omni.kit.manipulator.selector-1.1.3] startup
+[132.112s] [ext: omni.kit.property.adapter.core-1.0.2] startup
+[132.114s] [ext: omni.kit.viewport.manipulator.transform-107.0.4] startup
+[132.116s] [ext: omni.kit.manipulator.viewport-107.0.1] startup
+[132.117s] [ext: omni.kit.property.adapter.fabric-1.0.3] startup
+[132.118s] [ext: omni.kit.manipulator.prim.core-107.0.8] startup
+[132.124s] [ext: omni.kit.primitive.mesh-1.0.17] startup
+[132.127s] [ext: omni.kit.widget.filter-1.1.4] startup
+[132.128s] [ext: omni.kit.hotkeys.core-1.3.10] startup
+[132.130s] [ext: omni.kit.manipulator.prim.usd-107.0.3] startup
+[132.131s] [ext: omni.fabric.commands-1.1.6] startup
+[132.133s] [ext: omni.kit.window.file_exporter-1.0.33] startup
+[132.135s] [ext: omni.kit.widget.searchfield-1.1.8] startup
+[132.136s] [ext: omni.kit.manipulator.prim.fabric-107.0.4] startup
+[132.137s] [ext: omni.debugdraw-0.1.4] startup
+[132.141s] [ext: omni.kit.widget.stage-3.1.4] startup
+[132.151s] [ext: omni.kit.property.adapter.usd-1.0.2] startup
+[132.151s] [ext: omni.kit.manipulator.prim-107.0.0] startup
+[132.151s] [ext: omni.kvdb-107.3.26] startup
+[132.153s] [ext: omni.convexdecomposition-107.3.26] startup
+[132.156s] [ext: omni.physx.foundation-107.3.26] startup
+[132.158s] [ext: omni.localcache-107.3.26] startup
+[132.160s] [ext: omni.kit.window.content_browser_registry-0.0.6] startup
+[132.161s] [ext: omni.kit.widget.highlight_label-1.0.3] startup
+[132.161s] [ext: omni.kit.stage_template.core-1.1.22] startup
+[132.162s] [ext: omni.usdphysics-107.3.26] startup
+[132.165s] [ext: omni.kit.window.file-2.0.5] startup
+[132.168s] [ext: omni.physx.cooking-107.3.26] startup
+[132.172s] [ext: omni.physics-107.3.26] startup
+[132.175s] [ext: omni.kit.window.property-1.12.1] startup
+[132.178s] [ext: omni.kit.window.content_browser-3.1.3] startup
+[132.192s] [ext: omni.physx-107.3.26] startup
+[132.201s] [ext: omni.physics.stageupdate-107.3.26] startup
+[132.203s] [ext: omni.kit.property.usd-4.5.12] startup
+[132.213s] [ext: omni.kit.manipulator.selection-106.0.1] startup
+[132.214s] [ext: omni.physics.physx-107.3.26] startup
+2025-11-17T01:41:28Z [132,179ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+[132.216s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[132.216s] [ext: omni.kit.viewport.menubar.core-107.2.1] startup
+[132.233s] [ext: omni.kit.viewport.actions-107.0.2] startup
+[132.237s] [ext: omni.inspect-1.0.2] startup
+[132.239s] [ext: omni.kit.widget.layers-1.8.6] startup
+[132.251s] [ext: omni.kit.viewport.menubar.display-107.0.3] startup
+[132.253s] [ext: omni.usd.metrics.assembler-107.3.1] startup
+[132.262s] [ext: omni.graph.core-2.184.5] startup
+[132.265s] [ext: omni.kit.numpy.common-0.1.3] startup
+[132.267s] [ext: omni.usdphysics.ui-107.3.26] startup
+[132.293s] [ext: omni.physx.commands-107.3.26] startup
+[132.298s] [ext: isaacsim.core.deprecation_manager-0.2.7] startup
+[132.299s] [ext: omni.isaac.dynamic_control-2.0.7] startup
+2025-11-17T01:41:28Z [132,267ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+[132.304s] [ext: omni.physx.ui-107.3.26] startup
+[132.336s] [ext: isaacsim.core.version-2.0.6] startup
+[132.337s] [ext: omni.physics.tensors-107.3.26] startup
+[132.342s] [ext: omni.warp.core-1.8.2] startup
+[132.530s] [ext: omni.usd.metrics.assembler.physics-107.3.26] startup
+[132.532s] [ext: isaacsim.storage.native-1.5.1] startup
+[132.534s] [ext: omni.physx.tensors-107.3.26] startup
+[132.546s] [ext: isaacsim.core.utils-3.5.1] startup
+[132.549s] [ext: isaacsim.core.simulation_manager-1.4.4] startup
+[136.025s] [ext: omni.kit.widget.text_editor-1.1.1] startup
+[136.027s] [ext: omni.kit.stage_templates-2.0.0] startup
+[136.029s] [ext: isaacsim.core.prims-0.6.1] startup
+[136.055s] [ext: omni.kit.window.extensions-1.4.27] startup
+[136.061s] [ext: isaacsim.core.api-4.8.0] startup
+[136.072s] [ext: omni.kit.stagerecorder.core-107.0.3] startup
+[136.075s] [ext: omni.kit.usd.collect-2.4.5] startup
+[136.077s] [ext: omni.kit.stagerecorder.ui-107.0.1] startup
+[136.080s] [ext: omni.kit.usdz_export-1.0.9] startup
+[136.082s] [ext: omni.kit.stagerecorder.bundle-105.0.2] startup
+[136.082s] [ext: omni.kit.tool.asset_importer-4.3.2] startup
+[136.086s] [ext: omni.graph.tools-1.79.2] startup
+[136.107s] [ext: omni.graph.action_core-1.1.7] startup
+[136.109s] [ext: omni.graph-1.141.2] startup
+[136.150s] [ext: omni.ui_query-1.1.8] startup
+[136.152s] [ext: omni.graph.action_nodes-1.50.4] startup
+[136.156s] [ext: omni.graph.visualization.nodes-2.1.3] startup
+[136.178s] [ext: omni.kit.ui_test-1.3.7] startup
+[136.186s] [ext: omni.graph.action-1.130.0] startup
+[136.188s] [ext: omni.kit.selection-0.1.6] startup
+[136.193s] [ext: isaacsim.gui.components-1.2.1] startup
+[136.222s] [ext: isaacsim.gui.menu-2.4.4] startup
+[136.246s] [ext: isaacsim.app.about-2.0.11] startup
+[136.250s] [ext: isaacsim.asset.importer.mjcf-2.5.13] startup
+[136.296s] [ext: semantics.schema.editor-2.0.2] startup
+2025-11-17T01:41:32Z [136,265ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+[136.303s] [ext: semantics.schema.property-2.0.1] startup
+[136.306s] [ext: omni.kit.widget.graph-2.0.0] startup
+[136.312s] [ext: isaacsim.core.cloner-1.4.10] startup
+[136.315s] [ext: omni.kit.graph.delegate.default-1.2.3] startup
+[136.317s] [ext: omni.kit.graph.usd.commands-1.3.1] startup
+[136.319s] [ext: omni.kit.widget.material_preview-1.0.16] startup
+[136.322s] [ext: omni.kit.graph.editor.core-1.5.3] startup
+[136.325s] [ext: omni.graph.scriptnode-1.50.0] startup
+[136.327s] [ext: omni.kit.window.material_graph-1.9.1] startup
+[136.339s] [ext: omni.graph.image.core-0.6.1] startup
+[136.341s] [ext: isaacsim.util.debug_draw-3.1.0] startup
+[136.346s] [ext: omni.kit.widget.stage_icons-1.0.8] startup
+[136.350s] [ext: omni.graph.image.nodes-1.3.1] startup
+[136.351s] [ext: omni.kit.menu.create-2.0.1] startup
+[136.353s] [ext: omni.kit.window.stage-2.6.1] startup
+[136.360s] [ext: omni.graph.nodes-1.170.10] startup
+[136.370s] [ext: omni.graph.ui_nodes-1.50.5] startup
+[136.374s] [ext: omni.syntheticdata-0.6.13] startup
+[136.405s] [ext: omni.kit.scripting-107.3.2] startup
+[136.421s] [ext: omni.videoencoding-0.1.2] startup
+[136.428s] [ext: omni.warp-1.8.2] startup
+[136.445s] [ext: isaacsim.sensors.physx-2.3.2] startup
+[136.458s] [ext: isaacsim.replicator.behavior-1.1.16] startup
+[136.465s] [ext: omni.sensors.nv.common-3.0.0] startup
+[136.482s] [ext: isaacsim.simulation_app-2.12.2] startup
+[136.483s] [ext: omni.replicator.core-1.12.27] startup
+2025-11-17T01:41:33Z [136,642ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2025-11-17T01:41:33Z [136,642ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2025-11-17T01:41:33Z [136,643ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+[136.684s] [ext: omni.anim.curve.core-1.3.1] startup
+[136.705s] [ext: omni.sensors.net-1.0.0] startup
+[136.712s] [ext: omni.sensors.nv.materials-2.0.0] startup
+[136.721s] [ext: omni.kit.manipulator.camera-106.0.4] startup
+[136.727s] [ext: isaacsim.core.nodes-3.4.3] startup
+[136.740s] [ext: isaacsim.core.experimental.utils-0.3.0] startup
+[136.749s] [ext: isaacsim.test.docstring-1.1.0] startup
+[136.762s] [ext: omni.sensors.nv.ids-2.0.0] startup
+[136.773s] [ext: omni.sensors.nv.lidar-3.0.0] startup
+[136.789s] [ext: omni.kit.property.camera-1.0.10] startup
+[136.792s] [ext: omni.kit.property.audio-1.0.16] startup
+[136.801s] [ext: isaacsim.core.experimental.prims-0.8.1] startup
+[136.876s] [ext: omni.sensors.nv.wpm-3.0.0] startup
+[136.881s] [ext: omni.hydra.scene_api-0.1.2] startup
+[136.889s] [ext: omni.kit.property.light-1.0.12] startup
+[136.924s] [ext: omni.kit.property.geometry-2.0.4] startup
+[136.930s] [ext: omni.sensors.nv.radar-3.0.0] startup
+[136.946s] [ext: omni.kit.property.render-1.2.1] startup
+[136.950s] [ext: omni.kit.property.transform-1.5.13] startup
+[136.960s] [ext: omni.kit.property.material-1.11.9] startup
+[136.974s] [ext: omni.kit.widget.zoombar-1.0.6] startup
+[136.989s] [ext: isaacsim.gui.property-1.1.3] startup
+[137.021s] [ext: omni.kit.property.bundle-1.4.1] startup
+[137.042s] [ext: isaacsim.robot.surface_gripper-3.3.1] startup
+[137.063s] [ext: isaacsim.sensors.rtx-15.8.4] startup
+[137.144s] [ext: omni.kit.browser.core-2.3.13] startup
+[137.349s] [ext: omni.kit.viewport.menubar.lighting-107.3.1] startup
+[137.403s] [ext: omni.kit.viewport.menubar.camera-107.0.6] startup
+[137.460s] [ext: isaacsim.robot.manipulators-3.3.6] startup
+[137.470s] [ext: omni.kit.menu.stage-1.2.7] startup
+[137.475s] [ext: omni.kit.browser.folder.core-1.10.9] startup
+[137.494s] [ext: omni.kit.viewport.menubar.render-107.0.10] startup
+[137.504s] [ext: isaacsim.sensors.physics-0.4.3] startup
+[137.515s] [ext: omni.kit.tool.collect-2.2.18] startup
+[137.520s] [ext: omni.kit.viewport.menubar.settings-107.0.3] startup
+[137.528s] [ext: isaacsim.robot.policy.examples-4.1.11] startup
+[137.530s] [ext: isaacsim.examples.browser-0.2.1] startup
+[137.541s] [ext: isaacsim.asset.importer.urdf-2.4.30] startup
+[137.570s] [ext: omni.rtx.window.settings-0.6.19] startup
+[137.584s] [ext: omni.ocio-0.1.1] startup
+[137.586s] [ext: omni.physx.demos-107.3.26] startup
+[137.607s] [ext: omni.kit.property.physx-107.3.26] startup
+[137.634s] [ext: omni.replicator.replicator_yaml-2.0.11] startup
+[137.652s] [ext: omni.asset_validator.core-1.1.6] startup
+[137.708s] [ext: omni.rtx.settings.core-0.6.5] startup
+[137.712s] [ext: omni.physx.vehicle-107.3.26] startup
+[137.729s] [ext: omni.kit.window.console-1.1.4] startup
+[137.734s] [ext: omni.physx.asset_validator-107.3.26] startup
+[137.739s] [ext: omni.kit.window.toolbar-2.0.0] startup
+[137.742s] [ext: omni.kit.window.script_editor-2.0.1] startup
+[137.745s] [ext: isaacsim.robot.wheeled_robots-4.0.24] startup
+[137.752s] [ext: omni.physx.camera-107.3.26] startup
+[137.765s] [ext: omni.physx.cct-107.3.26] startup
+[137.780s] [ext: omni.physx.graph-107.3.26] startup
+[137.798s] [ext: omni.physx.supportui-107.3.26] startup
+[137.838s] [ext: omni.physx.telemetry-107.3.26] startup
+[137.842s] [ext: omni.kit.window.status_bar-0.1.9] startup
+[137.848s] [ext: omni.usd.metrics.assembler.ui-107.3.1] startup
+[137.863s] [ext: isaacsim.asset.browser-1.3.23] startup
+[137.916s] [ext: isaacsim.core.throttling-2.2.2] startup
+[137.919s] [ext: omni.kit.ui.actions-1.0.5] startup
+[137.921s] [ext: omni.physx.bundle-107.3.26] startup
+[137.922s] [ext: isaacsim.sensors.camera-1./home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/rsl_rl/utils/utils.py:245: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'policy' key. As an observation group with the name 'policy' was found, this is assumed to be the observation set. Consider adding the 'policy' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/rsl_rl/utils/utils.py:291: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'critic' key. As the configuration for 'critic' is missing, the observations from the 'policy' set are used. Consider adding the 'critic' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/maxime/IsaacLab-main/apps/isaaclab.python.kit
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.locomotion.velocity.config.go1.rough_env_cfg:UnitreeGo1RoughEnvCfg_PLAY
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2025-11-16_17-41-34.log
+[INFO]: Base environment:
+	Environment devic/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/rsl_rl/utils/utils.py:245: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'policy' key. As an observation group with the name 'policy' was found, this is assumed to be the observation set. Consider adding the 'policy' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/rsl_rl/utils/utils.py:291: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'critic' key. As the configuration for 'critic' is missing, the observations from the 'policy' set are used. Consider adding the 'critic' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/maxime/IsaacLab-main/apps/isaaclab.python.kit
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.locomotion.velocity.config.go1.rough_env_cfg:UnitreeGo1RoughEnvCfg_PLAY
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2025-11-16_17-41-40.log
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO] Generating terrains randomly took : 0.204277 seconds
+[INFO]: Time taken for scene creation : 0.961922 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 50
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 5.394538 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
+|    1     | add_base_mass             |
++----------+---------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++---------+---------------------------+
+|  Index  | Name                      |
++---------+---------------------------+
+|    0    | reset_base                |
+|    1    | reset_robot_joints        |
++---------+---------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++------------------------------------+
+|  Active Action Terms (shape: 12)   |
++--------+-------------+-------------+
+| Index  | Name        |   Dimension |
++--------+-------------+-------------+
+|   0    | joint_pos   |          12 |
++--------+-------------+-------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++----------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (235,)) |
++-----------+--------------------------------+-------------+
+|   Index   | Name                           |    Shape    |
++-----------+--------------------------------+-------------+
+|     0     | base_lin_vel                   |     (3,)    |
+|     1     | base_ang_vel                   |     (3,)    |
+|     2     | projected_gravity              |     (3,)    |
+|     3     | velocity_commands              |     (3,)    |
+|     4     | joint_pos                      |    (12,)    |
+|     5     | joint_vel                      |    (12,)    |
+|     6     | actions                        |    (12,)    |
+|     7     | height_scan                    |    (187,)   |
++-----------+--------------------------------+-------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+----------------------+----------+
+| Index | Name                 |   Weight |
++-------+----------------------+----------+
+|   0   | track_lin_vel_xy_exp |      1.0 |
+|   1   | track_ang_vel_z_exp  |      0.5 |
+|   2   | lin_vel_z_l2         |     -2.0 |
+|   3   | ang_vel_xy_l2        |    -0.05 |
+|   4   | dof_torques_l2       |   -1e-05 |
+|   5   | dof_acc_l2           | -2.5e-07 |
+|   6   | action_rate_l2       |    -0.01 |
+|   7   | feet_air_time        |    0.125 |
+|   8   | flat_orientation_l2  |     -5.0 |
+|   9   | dof_pos_limits       |      0.0 |
++-------+----------------------+----------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++---------------------------+
+|  Active Curriculum Terms  |
++--------+------------------+
+| Index  | Name             |
++--------+------------------+
+|   0    | terrain_levels   |
++--------+------------------+
+
+[INFO]: Completed setting up the environment...
+[INFO] Loading checkpoint from: /home/maxime/IsaacLab-main/logs/rsl_rl/unitree_go1_rough/2025-11-16_17-17-58/model_499.pt
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=12, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+[INFO] Starting policy playback...
+[INFO] Press Ctrl+C to stop
+[INFO] Episode 1 | Steps: 98 | Avg Reward: 0.019
+[INFO] Episode 2 | Steps: 6 | Avg Reward: 0.017
+[INFO] Episode 3 | Steps: 6 | Avg Reward: 0.020
+[INFO] Episode 4 | Steps: 83 | Avg Reward: 0.019
+[INFO] Episode 5 | Steps: 14 | Avg Reward: 0.018
+[INFO] Episode 6 | Steps: 15 | Avg Reward: 0.019
+[INFO] Episode 7 | Steps: 17 | Avg Reward: 0.019
+[INFO] Episode 8 | Steps: 82 | Avg Reward: 0.018
+[INFO] Episode 9 | Steps: 13 | Avg Reward: 0.018
+[INFO] Episode 10 | Steps: 6 | Avg Reward: 0.018
+[INFO] Episode 11 | Steps: 69 | Avg Reward: 0.018
+[INFO] Episode 12 | Steps: 75 | Avg Reward: 0.017
+[INFO] Episode 13 | Steps: 88 | Avg Reward: 0.016
+[INFO] Episode 14 | Steps: 106 | Avg Reward: 0.015
+[INFO] Episode 15 | Steps: 158 | Avg Reward: 0.013
+[INFO] Episode 16 | Steps: 32 | Avg Reward: 0.011
+[INFO] Episode 17 | SWarning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:181367): Gtk-WARNING **: 17:43:39.677: Failed to open display
+
+[INFO] Episode 77 | Steps: 11 | Avg Reward: 0.015
+[INFO] Episode 78 | Steps: 8 | Avg Reward: 0.015
+[INFO] Episode 79 | Steps: 13 | Avg Reward: 0.016
+[INFO] Episode 80 | Steps: 41 | Avg Reward: 0.018
+[INFO] Episode 81 | Steps: 7 | Avg Reward: 0.018
+[INFO] Episode 82 | Steps: 5 | Avg Reward: 0.018
+[INFO] Episode 83 | Steps: 29 | Avg Reward: 0.020
+[INFO] Episode 85 | Steps: 39 | Avg Reward: 0.019
+[INFO] Episode 86 | Steps: 30 | Avg Reward: 0.018
+[INFO] Episode 87 | Steps: 6 | Avg Reward: 0.017
+[INFO] Episode 88 | Steps: 42 | Avg Reward: 0.018
+[INFO] Episode 89 | Steps: 1 | Avg Reward: 0.018
+[INFO] Episode 90 | Steps: 73 | Avg Reward: 0.016
+[INFO] Episode 91 | Steps: 68 | Avg Reward: 0.015
+[INFO] Episode 115 | Steps: 167 | Avg Reward: 0.017
+[INFO] Episode 116 | Steps: 75 | Avg Reward: 0.017
+[INFO] Episode 117 | Steps: 5 | Avg Reward: 0.017
+[INFO] Episode 118 | Steps: 9 | Avg Reward: 0.018
+[INFO] Episode 119 | Steps: 3 | Avg Reward: 0.019
+[INFO] Episode 120 | Steps: 10 | Avg Reward: 0.017
+[INFO] Episode 121 | Steps: 7 | Avg Reward: 0.018
+[INFO] Episode 122 | Steps: 3 | Avg Reward: 0.016
+[INFO] Episode 123 | Steps: 1 | Avg Reward: 0.015
+[INFO] Episode 124 | Steps: 30 | Avg Reward: 0.018
+[INFO] Episode 126 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 127 |Terminated
+
+[0;32mTesting complete![0m
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:183635): Gtk-WARNING **: 17:47:03.655: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:185080): Gtk-WARNING **: 17:49:03.681: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:185593): Gtk-WARNING **: 17:51:03.709: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:186636): Gtk-WARNING **: 17:53:03.736: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:187962): Gtk-WARNING **: 17:55:03.763: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:188463): Gtk-WARNING **: 17:57:03.792: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:189056): Gtk-WARNING **: 17:59:03.822: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:190360): Gtk-WARNING **: 18:01:03.851: Failed to open display
+pisode 157 | Steps: 115 | Avg Reward: 0.016
+[INFO] Episode 172 | Steps: 21 | Avg Reward: 0.016
+[INFO] Episode 173 | Steps: 80 | Avg Reward: 0.017
+[INFO] Episode 174 | Steps: 22 | Avg Reward: 0.017
+[INFO] Episode 175 | Steps: 7 | Avg Reward: 0.016
+[INFO] Episode 176 | Steps: 3 | Avg Reward: 0.015
+[INFO] Episode 177 | Steps: 1 | Avg Reward: 0.015
+[INFO] Episode 178 | Steps: 30 | Avg Reward: 0.016
+[INFO] Episode 180 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 181 | Steps: 14 | Avg Reward: 0.017
+[INFO] Episode 182 | Steps: 4 | Avg Reward: 0.015
+[INFO] Episode 183 | Steps: 13 | Avg Reward: 0.016
+[INFO] Episode 184 | Steps: 5 | Avg Reward: 0.015
+[INFO] Episode 185 | Steps: 1 | Avg Reward: 0.015
+[INFO] Episode 186 | Steps: 31 | Avg Reward: 0.017
+[INFO] Episode 187 | Steps: 44 | Avg Reward: 0.017
+[INFO] Episode 188 | Steps: 9 | Avg Reward: 0.016
+[INFO] Episode 189 | Steps: 37 | Avg Reward: 0.016
+[INFO] Episode 190 | Steps: 45 | Avg Reward: 0.017
+[INFO] Episode 191 | Steps: 5 | Avg Reward: 0.016
+[INFO] Episode 192 | Steps: 91 | Avg Reward: 0.017
+[INFO] Episode 193 | Steps: 11 | Avg Reward: 0.017
+[INFO] Episode 194 | Steps: 8 | Avg Reward: 0.017
+[INFO] Episode 195 | Steps: 9 | Avg Reward: 0.016
+[INFO] Episode 196 | Steps: 45 | Avg Reward: 0.016
+[INFO] Episode 197 | Steps: 12 | Avg Reward: 0.016
+[INFO] Episode 198 | Steps: 16 | Avg Reward: 0.017
+[INFO] Episode 199 | Steps: 9 | Avg Reward: 0.016
+[INFO] Episode 200 | Steps: 16 | Avg Reward: 0.017
+[INFO] Episode 201 | Steps: 19 | Avg Reward: 0.016
+[INFO] Episode 203 | Steps: 8 | Avg Reward: 0.013
+[INFO] Episode 204 | Steps: 2 | Avg Reward: 0.013
+[INFO] Episode 205 | Steps: 24 | Avg Reward: 0.016
+[INFO] Episode 206 | Steps: 10 | Avg Reward: 0.015
+[INFO] Episode 207 | Steps: 7 | Avg Reward: 0.016
+[INFO] Episode 208 | Steps: 4 | Avg Reward: 0.015
+[INFO] Episode 209 | Steps: 18 | Avg Reward: 0.016
+[INFO] Episode 210 | Steps: 13 | Avg Reward: 0.016
+[INFO] Episode 211 | Steps: 1 | Avg Reward: 0.017
+[INFO] Episode 212 | Steps: 40 | Avg Reward: 0.017
+[INFO] Episode 213 | Steps: 5 | Avg Reward: 0.015
+[INFO] Episode 214 | Steps: 10 | Avg Reward: 0.018
+[INFO] Episode 215 | Steps: 19 | Avg Reward: 0.019
+[INFO] Episode 216 | Steps: 42 | Avg Reward: 0.019
+[INFO] Episode 217 | Steps: 25 | Avg Reward: 0.019
+[INFO] Episode 218 | Steps: 6 | Avg Reward: 0.018
+[INFO] Episode 219 | Steps: 25 | Avg Reward: 0.018
+[INFO] Episode 220 | Steps: 81 | Avg Reward: 0.019
+[INFO] Episode 221 | Steps: 34 | Avg Reward: 0.019
+[INFO] Episode 234 | Steps: 21 | Avg Reward: 0.018
+[INFO] Episode 235 | Steps: 26 | Avg Reward: 0.017
+[INFO] Episode 236 | Steps: 76 | Avg Reward: 0.019
+[INFO] Episode 237 | Steps: 41 | Avg Reward: 0.018
+[INFO] Episode 239 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 240 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 241 | Steps: 13 | Avg Reward: 0.016
+[INFO] Episode 243 | Steps: 5 | Avg Reward: 0.016
+[INFO] Episode 244 | Steps: 1 | Avg Reward: 0.014
+[INFO] Episode 245 | Steps: 31 | Avg Reward: 0.015
+[INFO] Episode 246 | Steps: 6 | Avg Reward: 0.014
+[INFO] Episode 247 | Steps: 35 | Avg Reward: 0.017
+[INFO] Episode 248 | Steps: 3 | Avg Reward: 0.018
+[INFO] Episode 249 | Steps: 46 | Avg Reward: 0.017
+[INFO] Episode 250 | Steps: 11 | Avg Reward: 0.013
+[INFO] Episode 251 | Steps: 1 | Avg Reward: 0.017
+[INFO] Episode 252 | Steps: 47 | Avg Reward: 0.017
+[INFO] Episode 253 | Steps: 34 | Avg Reward: 0.017
+[INFO] Episode 254 | Steps: 48 | Avg Reward: 0.016
+[INFO] Episode 255 | Steps: 9 | Avg Reward: 0.015
+[INFO] Episode 256 | Steps: 64 | Avg Reward: 0.016
+[INFO] Episode 257 | Steps: 5 | Avg Reward: 0.016
+[INFO] Episode 258 | Steps: 7 | Avg Reward: 0.017
+[INFO] Episode 259 | Steps: 16 | Avg Reward: 0.017
+[INFO] Episode 260 | Steps: 9 | Avg Reward: 0.017
+[INFO] Episode 261 | Steps: 16 | Avg Reward: 0.017
+[INFO] Episode 262 | Steps: 19 | Avg Reward: 0.017
+[INFO] Episode 264 | Steps: 8 | Avg Reward: 0.017
+[INFO] Episode 265 | Steps: 2 | Avg Reward: 0.017
+[INFO] Episode 266 | Steps: 34 | Avg Reward: 0.018
+[INFO] Episode 267 | Steps: 7 | Avg Reward: 0.017
+[INFO] Episode 268 | Steps: 48 | Avg Reward: 0.016
+[INFO] Episode 269 | Steps: 21 | Avg Reward: 0.017
+[INFO] Episode 270 | Steps: 7 | Avg Reward: 0.017
+[INFO] Episode 271 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 272 | Steps: 16 | Avg Reward: 0.017
+[INFO] Episode 273 | Steps: 19 | Avg Reward: 0.015
+[INFO] Episode 274 | Steps: 4 | Avg Reward: 0.014
+[INFO] Episode 275 | Steps: 19 | Avg Reward: 0.017
+[INFO] Episode 276 | Steps: 18 | Avg Reward: 0.017
+[INFO] Episode 277 | Steps: 7 | Avg Reward: 0.016
+[INFO] Episode 278 | Steps: 1 | Avg Reward: 0.017
+[INFO] Episode 279 | Steps: 5 | Avg Reward: 0.016
+[INFO] Episode 280 | Steps: 25 | Avg Reward: 0.017
+[INFO] Episode 281 | Steps: 21 | Avg Reward: 0.018
+[INFO] Episode 282 | Steps: 60 | Avg Reward: 0.016
+[INFO] Episode 283 | Steps: 4 | Avg Reward: 0.015
+[INFO] Episode 284 | Steps: 34 | Avg Reward: 0.016
+[INFO] Episode 295 | Steps: 17 | Avg Reward: 0.016
+[INFO] Episode 296 | Steps: 10 | Avg Reward: 0.013
+[INFO] Episode 297 | Steps: 16 | Avg Reward: 0.016
+[INFO] Episode 298 | Steps: 14 | Avg Reward: 0.016
+[INFO] Episode 299 | Steps: 12 | Avg Reward: 0.017
+[INFO] Episode 300 | Steps: 50 | Avg Reward: 0.019
+[INFO] Episode 301 | Steps: 55 | Avg Reward: 0.017
+[INFO] Episode 302 | Steps: 4 | Avg Reward: 0.017
+[INFO] Episode 303 | Steps: 31 | Avg Reward: 0.017
+[INFO] Episode 304 | Steps: 6 | Avg Reward: 0.016
+[INFO] Episode 305 | Steps: 26 | Avg Reward: 0.017
+Terminated
+
+[0;32mTesting complete![0m
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:183642): Gtk-WARNING **: 17:47:03.696: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:185087): Gtk-WARNING **: 17:49:03.722: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:185600): Gtk-WARNING **: 17:51:03.753: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:186643): Gtk-WARNING **: 17:53:03.782: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:187969): Gtk-WARNING **: 17:55:03.809: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:188470): Gtk-WARNING **: 17:57:03.836: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:189063): Gtk-WARNING **: 17:59:03.865: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:190367): Gtk-WARNING **: 18:01:03.891: Failed to open display
