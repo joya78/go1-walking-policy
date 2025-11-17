@@ -612,74 +612,64 @@ Warning: --icon-name is deprecated and will be removed in a future version of ze
 Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
 
 (zenity:192354): Gtk-WARNING **: 18:07:03.935: Failed to open display
- Avg Reward: 0.015
-[INFO] Episode 183 | Steps: 13 | Avg Reward: 0.016
-[INFO] Episode 184 | Steps: 5 | Avg Reward: 0.015
-[INFO] Episode 185 | Steps: 1 | Avg Reward: 0.015
-[INFO] Episode 186 | Steps: 31 | Avg Reward: 0.017
-[INFO] Episode 187 | Steps: 44 | Avg Reward: 0.017
-[INFO] Episode 188 | Steps: 9 | Avg Reward: 0.016
-[INFO] Episode 189 | Steps: 37 | Avg Reward: 0.016
-[INFO] Episode 190 | Steps: 45 | Avg Reward: 0.017
-[INFO] Episode 191 | Steps: 5 | Avg Reward: 0.016
-[INFO] Episode 192 | Steps: 91 | Avg Reward: 0.017
-[INFO] Episode 193 | Steps: 11 | Avg Reward: 0.017
-[INFO] Episode 194 | Steps: 8 | Avg Reward: 0.017
-[INFO] Episode 195 | Steps: 9 | Avg Reward: 0.016
-[INFO] Episode 196 | Steps: 45 | Avg Reward: 0.016
-[INFO] Episode 197 | Steps: 12 | Avg Reward: 0.016
-[INFO] Episode 198 | Steps: 16 | Avg Reward: 0.017
-[INFO] Episode 199 | Steps: 9 | Avg Reward: 0.016
-[INFO] Episode 200 | Steps: 16 | Avg Reward: 0.017
-[INFO] Episode 201 | Steps: 19 | Avg Reward: 0.016
-[INFO] Episode 203 | Steps: 8 | Avg Reward: 0.013
-[INFO] Episode 204 | Steps: 2 | Avg Reward: 0.013
-[INFO] Episode 205 | Steps: 24 | Avg Reward: 0.016
-[INFO] Episode 206 | Steps: 10 | Avg Reward: 0.015
-[INFO] Episode 207 | Steps: 7 | Avg Reward: 0.016
-[INFO] Episode 208 | Steps: 4 | Avg Reward: 0.015
-[INFO] Episode 209 | Steps: 18 | Avg Reward: 0.016
-[INFO] Episode 210 | Steps: 13 | Avg Reward: 0.016
-[INFO] Episode 211 | Steps: 1 | Avg Reward: 0.017
-[INFO] Episode 212 | Steps: 40 | Avg Reward: 0.017
-[INFO] Episode 213 | Steps: 5 | Avg Reward: 0.015
-[INFO] Episode 214 | Steps: 10 | Avg Reward: 0.018
-[INFO] Episode 215 | Steps: 19 | Avg Reward: 0.019
-[INFO] Episode 216 | Steps: 42 | Avg Reward: 0.019
-[INFO] Episode 217 | Steps: 25 | Avg Reward: 0.019
-[INFO] Episode 218 | Steps: 6 | Avg Reward: 0.018
-[INFO] Episode 219 | Steps: 25 | Avg Reward: 0.018
-[INFO] Episode 220 | Steps: 81 | Avg Reward: 0.019
-[INFO] Episode 221 | Steps: 34 | Avg Reward: 0.019
-[INFO] Episode 234 | Steps: 21 | Avg Reward: 0.018
-[INFO] Episode 235 | Steps: 26 | Avg Reward: 0.017
-[INFO] Episode 236 | Steps: 76 | Avg Reward: 0.019
-[INFO] Episode 237 | Steps: 41 | Avg Reward: 0.018
-[INFO] Episode 239 | Steps: 18 | Avg Reward: 0.017
-[INFO] Episode 240 | Steps: 18 | Avg Reward: 0.017
-[INFO] Episode 241 | Steps: 13 | Avg Reward: 0.016
-[INFO] Episode 243 | Steps: 5 | Avg Reward: 0.016
-[INFO] Episode 244 | Steps: 1 | Avg Reward: 0.014
-[INFO] Episode 245 | Steps: 31 | Avg Reward: 0.015
-[INFO] Episode 246 | Steps: 6 | Avg Reward: 0.014
-[INFO] Episode 247 | Steps: 35 | Avg Reward: 0.017
-[INFO] Episode 248 | Steps: 3 | Avg Reward: 0.018
-[INFO] Episode 249 | Steps: 46 | Avg Reward: 0.017
-[INFO] Episode 250 | Steps: 11 | Avg Reward: 0.013
-[INFO] Episode 251 | Steps: 1 | Avg Reward: 0.017
-[INFO] Episode 252 | Steps: 47 | Avg Reward: 0.017
-[INFO] Episode 253 | Steps: 34 | Avg Reward: 0.017
-[INFO] Episode 254 | Steps: 48 | Avg Reward: 0.016
-[INFO] Episode 255 | Steps: 9 | Avg Reward: 0.015
-[INFO] Episode 256 | Steps: 64 | Avg Reward: 0.016
-[INFO] Episode 257 | Steps: 5 | Avg Reward: 0.016
-[INFO] Episode 258 | Steps: 7 | Avg Reward: 0.017
-[INFO] Episode 259 | Steps: 16 | Avg Reward: 0.017
-[INFO] Episode 260 | Steps: 9 | Avg Reward: 0.017
-[INFO] Episode 261 | Steps: 16 | Avg Reward: 0.017
-[INFO] Episode 262 | Steps: 19 | Avg Reward: 0.017
-[INFO] Episode 264 | Steps: 8 | Avg Reward: 0.017
-[INFO] Episode 265 | Steps: 2 | Avg Reward: 0.017
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:193009): Gtk-WARNING **: 18:09:03.966: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:193513): Gtk-WARNING **: 18:11:03.996: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:195194): Gtk-WARNING **: 18:13:04.024: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:195935): Gtk-WARNING **: 18:15:04.056: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:197401): Gtk-WARNING **: 18:17:04.083: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:198102): Gtk-WARNING **: 18:19:04.115: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:198740): Gtk-WARNING **: 18:21:04.145: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:199515): Gtk-WARNING **: 18:23:04.173: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:199984): Gtk-WARNING **: 18:25:04.203: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:200443): Gtk-WARNING **: 18:27:04.233: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:200902): Gtk-WARNING **: 18:29:04.265: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:201691): Gtk-WARNING **: 18:31:04.293: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:202173): Gtk-WARNING **: 18:33:04.326: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:202635): Gtk-WARNING **: 18:35:04.357: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:203103): Gtk-WARNING **: 18:37:04.384: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:204375): Gtk-WARNING **: 18:39:04.414: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:205403): Gtk-WARNING **: 18:41:04.442: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:206722): Gtk-WARNING **: 18:43:04.473: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:207430): Gtk-WARNING **: 18:45:04.502: Failed to open display
+NFO] Episode 265 | Steps: 2 | Avg Reward: 0.017
 [INFO] Episode 266 | Steps: 34 | Avg Reward: 0.018
 [INFO] Episode 267 | Steps: 7 | Avg Reward: 0.017
 [INFO] Episode 268 | Steps: 48 | Avg Reward: 0.016
@@ -746,3 +736,60 @@ Warning: --icon-name is deprecated and will be removed in a future version of ze
 Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
 
 (zenity:192361): Gtk-WARNING **: 18:07:03.977: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:193016): Gtk-WARNING **: 18:09:04.009: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:193520): Gtk-WARNING **: 18:11:04.039: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:195201): Gtk-WARNING **: 18:13:04.068: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:195942): Gtk-WARNING **: 18:15:04.097: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:197408): Gtk-WARNING **: 18:17:04.128: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:198109): Gtk-WARNING **: 18:19:04.158: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:198747): Gtk-WARNING **: 18:21:04.186: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:199522): Gtk-WARNING **: 18:23:04.212: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:199991): Gtk-WARNING **: 18:25:04.242: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:200450): Gtk-WARNING **: 18:27:04.270: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:200909): Gtk-WARNING **: 18:29:04.298: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:201698): Gtk-WARNING **: 18:31:04.328: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:202180): Gtk-WARNING **: 18:33:04.353: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:202641): Gtk-WARNING **: 18:35:04.380: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:203109): Gtk-WARNING **: 18:37:04.408: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:204381): Gtk-WARNING **: 18:39:04.438: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:205409): Gtk-WARNING **: 18:41:04.463: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:206728): Gtk-WARNING **: 18:43:04.491: Failed to open display
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:207436): Gtk-WARNING **: 18:45:04.517: Failed to open display
