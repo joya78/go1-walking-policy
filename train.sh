@@ -12,7 +12,7 @@ echo -e "${BLUE}Go1 Walking Policy Training${NC}"
 echo -e "${BLUE}========================================${NC}"
 
 # Set Isaac Lab directory
-ISAACLAB_DIR="/home/maxime/IsaacLab-main"
+ISAACLAB_DIR="/home/ethan/IsaacLab"
 
 # Check if Isaac Lab directory exists
 if [ ! -f "$ISAACLAB_DIR/isaaclab.sh" ]; then
@@ -24,8 +24,8 @@ cd "$ISAACLAB_DIR"
 
 # Activate conda environment
 echo -e "\n${GREEN}Activating conda environment...${NC}"
-source /data/home/maxime/miniconda3/etc/profile.d/conda.sh
-conda activate env_isaaclab
+source /home/ethan/miniconda3/etc/profile.d/conda.sh
+conda activate isaac_lab
 
 # Default parameters
 TASK="Isaac-Velocity-Rough-Unitree-Go1-v0"
@@ -103,7 +103,7 @@ mkdir -p logs
 echo -e "\n${GREEN}Starting training...${NC}"
 echo -e "${YELLOW}Press Ctrl+C to stop training${NC}\n"
 
-bash isaaclab.sh -p /home/maxime/my_go1_project/scripts/train_go1_walking.py \
+bash isaaclab.sh -p /home/ethan/go1-walking-policy/scripts/train_go1_walking.py \
     --task "$TASK" \
     --num_envs "$NUM_ENVS" \
     --max_iterations "$MAX_ITERATIONS" \

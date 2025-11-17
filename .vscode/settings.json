@@ -1,0 +1,12 @@
+{
+    "python.analysis.extraPaths": [
+        "/home/ethan/IsaacLab",
+        "/home/ethan/go1-walking-policy"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticsMode": "workspace",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true
+    }
+}

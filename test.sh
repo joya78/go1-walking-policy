@@ -12,7 +12,7 @@ echo -e "${BLUE}Go1 Walking Policy Testing${NC}"
 echo -e "${BLUE}========================================${NC}"
 
 # Set Isaac Lab directory
-ISAACLAB_DIR="/home/maxime/IsaacLab-main"
+ISAACLAB_DIR="/home/ethan/IsaacLab"
 
 # Check if Isaac Lab directory exists
 if [ ! -f "$ISAACLAB_DIR/isaaclab.sh" ]; then
@@ -24,8 +24,8 @@ cd "$ISAACLAB_DIR"
 
 # Activate conda environment
 echo -e "\n${GREEN}Activating conda environment...${NC}"
-source /data/home/maxime/miniconda3/etc/profile.d/conda.sh
-conda activate env_isaaclab
+source /home/ethan/miniconda3/etc/profile.d/conda.sh
+conda activate isaac_lab
 
 # Default parameters
 TASK="Isaac-Velocity-Rough-Unitree-Go1-Play-v0"
@@ -115,7 +115,7 @@ if [ ! -f "$CHECKPOINT" ]; then
 fi
 
 # Build the command
-CMD="bash isaaclab.sh -p /home/maxime/my_go1_project/scripts/play_go1_walking.py \
+CMD="bash isaaclab.sh -p /home/ethan/go1-walking-policy/scripts/play_go1_walking.py \
     --task $TASK \
     --num_envs $NUM_ENVS \
     --checkpoint $CHECKPOINT"
@@ -144,5 +144,5 @@ eval $CMD
 
 echo -e "\n${GREEN}Testing complete!${NC}"
 if [ -n "$VIDEO" ]; then
-    echo -e "${GREEN}Videos saved to: /home/maxime/my_go1_project/videos/${NC}"
+    echo -e "${GREEN}Videos saved to: /home/ethan/go1-walking-policy/videos/${NC}"
 fi

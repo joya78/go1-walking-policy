@@ -1,0 +1,83 @@
+nohup: ignoring input
+
+Using device: cuda
+
+================================================================================
+Starting PPO Training
+================================================================================
+
+Iteration 100/1000
+  Episode Reward:   13.97
+  Actor Loss: -0.0114
+  Critic Loss: 12.6719
+  Entropy: 17.3980
+  Time:   0.05s
+
+Iteration 200/1000
+  Episode Reward:   13.33
+  Actor Loss: -0.0032
+  Critic Loss: 10.8989
+  Entropy: 17.4545
+  Time:   0.04s
+
+Iteration 300/1000
+  Episode Reward:   13.43
+  Actor Loss: -0.0150
+  Critic Loss: 11.8124
+  Entropy: 17.3856
+  Time:   0.04s
+
+Iteration 400/1000
+  Episode Reward:   13.81
+  Actor Loss: -0.0066
+  Critic Loss: 11.7117
+  Entropy: 17.2869
+  Time:   0.04s
+
+Iteration 500/1000
+  Episode Reward:   12.77
+  Actor Loss: -0.0052
+  Critic Loss: 11.0642
+  Entropy: 17.5502
+  Time:   0.05s
+
+Iteration 600/1000
+  Episode Reward:   11.72
+  Actor Loss:  0.0046
+  Critic Loss:  8.7597
+  Entropy: 17.9104
+  Time:   0.04s
+
+Iteration 700/1000
+  Episode Reward:   12.43
+  Actor Loss: -0.0105
+  Critic Loss:  9.7495
+  Entropy: 18.0252
+  Time:   0.05s
+
+Iteration 800/1000
+  Episode Reward:   12.53
+  Actor Loss: -0.0147
+  Critic Loss:  9.9994
+  Entropy: 18.0663
+  Time:   0.05s
+
+Iteration 900/1000
+  Episode Reward:   13.17
+  Actor Loss: -0.0028
+  Critic Loss: 10.4788
+  Entropy: 18.0847
+  Time:   0.04s
+
+Iteration 1000/1000
+  Episode Reward:   13.41
+  Actor Loss: -0.0145
+  Critic Loss: 10.6266
+  Entropy: 18.3179
+  Time:   0.04s
+
+================================================================================
+Training Complete!
+================================================================================
+
+Policy saved to: logs/ppo_trained/policy.pt
