@@ -1,0 +1,38 @@
+[0;34m========================================[0m
+[0;34mGo1 Walking Policy Training[0m
+[0;34m========================================[0m
+
+[0;32mActivating conda environment...[0m
+
+[0;32mTraining Configuration:[0m
+  Task: Isaac-Velocity-Rough-Unitree-Go1-v0
+  Number of Environments: 4096
+  Max Iterations: 1500
+  Mode: Headless
+
+[0;32mStarting training...[0m
+[1;33mPress Ctrl+C to stop training[0m
+
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H [INFO] Using python from: /home/maxime/miniconda3/envs/env_isaaclab/bin/python
+[WARN][AppLauncher]: There are no arguments attached to the ArgumentParser object. If you have your own arguments, please load your own arguments before calling the `AppLauncher.add_app_launcher_args` method. This allows the method to check the validity of the arguments and perform checks for argument names.
+Traceback (most recent call last):
+  File "/home/maxime/my_go1_project/scripts/train_go1_walking.py", line 14, in <module>
+    parser.add_argument("--cpu", action="store_true", default=False, help="Use CPU pipeline")
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1473, in add_argument
+    return self._add_action(action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1855, in _add_action
+    self._optionals._add_action(action)
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1675, in _add_action
+    action = super(_ArgumentGroup, self)._add_action(action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1487, in _add_action
+    self._check_conflict(action)
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1624, in _check_conflict
+    conflict_handler(action, confl_optionals)
+  File "/home/maxime/miniconda3/envs/env_isaaclab/lib/python3.11/argparse.py", line 1633, in _handle_conflict_error
+    raise ArgumentError(action, message % conflict_string)
+argparse.ArgumentError: argument --cpu: conflicting option string: --cpu
+
+[0;32mTraining completed![0m
+Logs saved to: [0;34mlogs/rsl_rl/[0m
